@@ -1,0 +1,10 @@
+require './lib/transfer_sender'
+
+using RubyClock::DSL
+
+
+TransferSender.send_transfers
+
+every('1 minute') do
+    TransferSender.send_transfers
+end
