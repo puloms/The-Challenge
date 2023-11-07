@@ -5,6 +5,12 @@ using RubyClock::DSL
 
 TransferSender.send_transfers
 
-every('1 minute') do
+every('3 hours') do
     TransferSender.send_transfers
+end
+
+sleep 60
+
+every('24 hours') do
+    Report.write_final_report
 end
