@@ -23,6 +23,8 @@ class Report
             report << ['Success Rate %', 'Errors list', 'Avg. transfer conclusion time in seconds']
             report << report_data
         end
+
+        File.delete(TEMP_REPORT)
     end
 
     private
